@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('./assets/fonts/gotham-light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('./assets/fonts/gotham-medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+.inner-top-shadow {
+	box-shadow: inset 0 4px 10px -1px rgba(0, 0, 0, 0.7);
+}
+
+.header-shadow-top::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%; /* controla até onde a sombra vai */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+	pointer-events: none;
+	z-index: 0;
+}
+
+body {
+	@apply bg-gradient-to-b from-bg-start to-bg-end min-h-screen;
+}
