@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	@apply bg-gradient-to-t from-bg-start to-bg-end min-h-screen font-gotham font-light text-white tracking-tight;
+}
+
 @font-face {
 	font-family: 'Gotham';
 	src: url('./assets/fonts/gotham-light.ttf') format('truetype');
@@ -29,9 +33,9 @@
 	height: 100%; /* controla até onde a sombra vai */
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 	pointer-events: none;
-	z-index: 0;
+	z-index: -1;
 }
 
-body {
+/* body {
 	@apply bg-gradient-to-b from-bg-start to-bg-end min-h-screen;
-}
+} */

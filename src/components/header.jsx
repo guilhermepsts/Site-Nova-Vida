@@ -5,7 +5,7 @@ const Header = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setScrolled(window.scrollY > 50); // altera quando passar de 50px
+			setScrolled(window.scrollY > 100);
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -14,24 +14,45 @@ const Header = () => {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${
-				scrolled ? 'bg-black/90' : 'bg-transparent'
+			className={`fixed top-0 left-0 w-full h-[100px] lg:h-auto z-50 transition-colors duration-500 ${
+				scrolled ? 'bg-black/100' : 'header-shadow-top'
 			}`}
 		>
 			<div className="p-4 flex flex-col items-center">
 				<a href="./">
-					<img
-						src="src/assets/nova-vida.svg"
-						alt="Igreja Nova Vida do Grajaú"
-					/>
+					<picture>
+						<source
+							srcSet="src/assets/images/nova-vida.svg"
+							media="(min-width: 1024px)"
+						/>
+
+						<img
+							src="/images/favicon.svg"
+							className="h-16"
+							alt="Igreja Nova Vida do Grajaú"
+						/>
+					</picture>
 				</a>
 				<nav className="font-gotham font-light text-xl text-white mt-4">
-					<ul className="flex justify-center space-x-8">
-						<li>sobre nós</li>
-						<li>eventos</li>
-						<li>ministérios</li>
-						<li>oferta</li>
-						<li>contato</li>
+					<ul className="justify-center space-x-8 hidden lg:flex">
+						<li>
+							<a href="#about">sobre nós</a>
+						</li>
+						<li>
+							<a href="#services">encontros</a>
+						</li>
+						<li>
+							<a href="#events">eventos</a>
+						</li>
+						<li>
+							<a href="#ministres">ministérios</a>
+						</li>
+						<li>
+							<a href="#donations">oferta</a>
+						</li>
+						<li>
+							<a href="#contact">contato</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
