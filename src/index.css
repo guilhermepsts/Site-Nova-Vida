@@ -36,6 +36,14 @@ body {
 	z-index: -1;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 /* body {
 	@apply bg-gradient-to-b from-bg-start to-bg-end min-h-screen;
 } */

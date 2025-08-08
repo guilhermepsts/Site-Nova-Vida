@@ -16,6 +16,9 @@ export default function Slider() {
 
 	return (
 		<div className="relative w-full max-h-screen overflow-hidden ">
+			<h1 className="text-center font-gotham text-4xl lg:text-5xl text-white font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+				Sua família no Grajaú.
+			</h1>
 			<div
 				className="flex transition-transform duration-700 ease-in-out"
 				style={{ transform: `translateX(-${current * 100}%)` }}
