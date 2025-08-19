@@ -6,6 +6,12 @@ body {
 	@apply bg-gradient-to-t from-bg-start to-bg-end min-h-screen font-gotham font-light text-white tracking-tight;
 }
 
+@layer components {
+	section[id] {
+		@apply scroll-mt-44; /* ajusta conforme a altura do header */
+	}
+}
+
 @font-face {
 	font-family: 'Gotham';
 	src: url('./assets/fonts/gotham-light.ttf') format('truetype');
@@ -18,6 +24,10 @@ body {
 	src: url('./assets/fonts/gotham-medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 .inner-top-shadow {
@@ -42,6 +52,10 @@ body {
 .scrollbar-hide {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+.bg-yellow {
+	@apply bg-[#CC9933];
 }
 
 /* body {

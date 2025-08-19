@@ -5,13 +5,16 @@ const Services = () => {
 			className="mt-40 space-y-20 px-8 max-w-5xl items-center mx-auto"
 		>
 			<div className="grid grid-cols-[1fr_2fr] gap-8 items-center">
-				<h2 className="font-medium text-4xl text-white">
+				<h2 className="font-medium text-4xl text-white" data-aos="fade-down">
 					nossos <br /> encontros
 				</h2>
-				<hr />
+				<hr data-aos="fade-down" />
 			</div>
 
-			<div class="grid grid-cols-[1fr_2fr] tracking-tighter gap-4 max-w-4xl font-light text-2xl lg:text-3xl ">
+			<div
+				class="grid grid-cols-[1fr_2fr] tracking-tighter gap-4 max-w-4xl font-light text-2xl lg:text-3xl"
+				data-aos="fade-up"
+			>
 				<div class="text-right pr-4 border-r border-white/30 font-light">
 					domingo
 				</div>

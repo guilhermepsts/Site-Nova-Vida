@@ -48,9 +48,6 @@ const Header = () => {
 							<a href="#ministres">ministérios</a>
 						</li>
 						<li>
-							<a href="#donations">oferta</a>
-						</li>
-						<li>
 							<a href="#contact">contato</a>
 						</li>
 					</ul>

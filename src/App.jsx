@@ -28,7 +28,7 @@ function App() {
 		},
 	];
 
-	const ministerios = [
+	const grupos = [
 		{
 			title: 'Ministério 1',
 			description: 'Descrição do ministério 1.',
@@ -54,7 +54,7 @@ function App() {
 			<About />
 			<Services />
 			<Gallery title="nossos eventos" events={eventos} id="events" />
-			<Gallery title="nossos ministérios" events={ministerios} id="ministres" />
+			<Gallery title="nossos minisérios" events={grupos} id="ministres" />
 			<Contact />
 			<Footer />
 		</div>

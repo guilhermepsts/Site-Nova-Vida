@@ -18,27 +18,23 @@ const Gallery = ({ title, events, id }) => {
 	return (
 		<section
 			id={id}
-			className="mt-40 space-y-20 px-8 max-w-5xl items-center mx-auto"
+			className="mt-40 space-y-20 px-8  max-w-5xl items-center mx-auto"
 		>
 			{/* Cabeçalho */}
 			<div className="flex items-center gap-8">
-				<h2 className="font-medium text-4xl text-white">
+				<h2 className="font-medium text-4xl text-white" data-aos="fade-down">
 					{firstWord} <br /> {rest.join(' ')}
 				</h2>
-				<hr className="flex-grow border-gray-700" />
+				<hr className="flex-grow border-gray-700" data-aos="fade-down" />
 			</div>
 
-			{/* Área do carrossel com botões */}
-			<div className="relative">
-				{/* Botão Esquerda */}
+			<div className="relative" data-aos="fade-up">
 				<button
 					onClick={() => scroll('left')}
 					className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900 p-3 rounded-full z-10"
 				>
 					<ChevronLeft className="text-white" />
 				</button>
-
-				{/* Lista de cards */}
 				<div
 					ref={carouselRef}
 					className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth"
@@ -46,7 +42,7 @@ const Gallery = ({ title, events, id }) => {
 					{events.map((event, index) => (
 						<div
 							key={index}
-							className="bg-gray-800 p-10 rounded-lg shadow-lg flex-shrink-0 w-80 snap-center"
+							className="bg-gray-800 p-10 rounded-lg shadow-lg flex-shrink-0 h-64 w-80 snap-center"
 						>
 							<h3 className="text-xl font-semibold text-white">
 								{event.title}
