@@ -1,10 +1,10 @@
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
 import Header from './components/Header';
-import Services from './components/Services';
 import Slider from './components/Slider';
-import Contact from './components/Contact';
 import About from './components/About';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
 	const eventos = [
@@ -54,7 +54,7 @@ function App() {
 			<About />
 			<Services />
 			<Gallery title="nossos eventos" events={eventos} id="events" />
-			<Gallery title="nossos minisérios" events={grupos} id="ministres" />
+			<Gallery title="nossos ministérios" events={grupos} id="ministres" />
 			<Contact />
 			<Footer />
 		</div>
